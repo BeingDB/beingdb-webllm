@@ -1,9 +1,9 @@
 # beingdb-webllm
 
-**A chatbot that answers questions from [BeingDB](https://github.com/jptmoore/beingdb)
+**A chatbot that answers questions from [BeingDB](https://github.com/beingdb/beingdb)
 facts, entirely in your browser.** A local language model
 ([WebLLM](https://github.com/mlc-ai/web-llm)) turns the question into a
-BeingDB query; BeingDB ([beingdb-wasm](https://github.com/jptmoore/beingdb-wasm))
+BeingDB query; BeingDB ([beingdb-wasm](https://github.com/beingdb/beingdb-wasm))
 checks it, applies any repair it can prove, and answers from the facts.
 
 ```
@@ -26,12 +26,12 @@ scores the query and its rows only.
 Nothing leaves the browser: the only network access is the one-off
 download of the model weights, which the browser caches.
 
-It currently runs over the [REWIND interviews](https://github.com/jptmoore/beingdb-rewind-interviews)
+It currently runs over the [REWIND interviews](https://github.com/beingdb/beingdb-rewind-interviews)
 facts bundled with beingdb-wasm.
 
 ## Try it
 
-**<https://jptmoore.github.io/beingdb-webllm/>**: nothing to install. You
+**<https://beingdb.github.io/beingdb-webllm/>**: nothing to install. You
 need a browser with WebGPU and `shader-f16` (current Chrome or Edge on a
 desktop or laptop), and about 2 GB of disk and GPU memory: the first
 **Start the chatbot** downloads the model once, and the browser caches it.
@@ -42,7 +42,7 @@ You need Node 22 or later, a browser with WebGPU and `shader-f16` (current
 Chrome or Edge), and about 2 GB of disk and GPU memory for the default model.
 
 ```sh
-git clone https://github.com/jptmoore/beingdb-wasm.git ../beingdb-wasm   # runtime and data; nothing to build
+git clone https://github.com/beingdb/beingdb-wasm.git ../beingdb-wasm   # runtime and data; nothing to build
 npm install
 npm run link     # link beingdb-wasm's prebuilt runtime and data, and WebLLM, into vendor/
 npm run serve    # http://localhost:8010/
@@ -126,7 +126,7 @@ model still exists in the new release.
 needed. To try a change to BeingDB, build beingdb-wasm from source
 (`dune build --profile release` there) and run `npm run link -- --build`. To
 change the data or its predicate declarations, see
-[the bundled REWIND dataset](https://github.com/jptmoore/beingdb-wasm#the-bundled-rewind-dataset).
+[the bundled REWIND dataset](https://github.com/beingdb/beingdb-wasm#the-bundled-rewind-dataset).
 
 ## Layout
 

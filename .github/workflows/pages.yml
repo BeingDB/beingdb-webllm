@@ -1,5 +1,5 @@
 # Publish the chatbot over the REWIND facts on GitHub Pages:
-# https://jptmoore.github.io/beingdb-webllm/
+# https://beingdb.github.io/beingdb-webllm/
 #
 # Uses BeingDB WASM's committed prebuilt runtime and REWIND data (no OCaml),
 # runs the model-free tests, builds dist/site/ and deploys it. Pull requests
@@ -34,7 +34,7 @@ jobs:
       - name: Check out BeingDB WASM next to this repository
         run: |
           git init -q ../beingdb-wasm
-          git -C ../beingdb-wasm fetch -q --depth 1 https://github.com/jptmoore/beingdb-wasm.git "$BEINGDB_WASM_REF"
+          git -C ../beingdb-wasm fetch -q --depth 1 https://github.com/beingdb/beingdb-wasm.git "$BEINGDB_WASM_REF"
           git -C ../beingdb-wasm checkout -q FETCH_HEAD
 
       - uses: actions/setup-node@v7

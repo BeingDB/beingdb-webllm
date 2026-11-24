@@ -37,7 +37,7 @@ const link = (name, target) => {
   console.log(`vendor/${name} -> ${target}`);
 };
 
-if (!existsSync(wasmRepo)) fail("../beingdb-wasm not found: git clone https://github.com/jptmoore/beingdb-wasm.git ../beingdb-wasm");
+if (!existsSync(wasmRepo)) fail("../beingdb-wasm not found: git clone https://github.com/beingdb/beingdb-wasm.git ../beingdb-wasm");
 mkdirSync(vendor, { recursive: true });
 
 if (build) {
